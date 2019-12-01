@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title> Century</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="js.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+    <div class="navbar navbar-expand bg-light flex-column flex-md-row bd-navbar object">
+      <div class="container">
+      <a class="navbar-brand text-success" href="#">
+        <img src="img/logo.jpg" alt="logo">
+        Новый век агротехнологий
+      </a>
+      <div>
+        <ul class="list-unstyled">
+          <li>
+            <i class="fas fa-check"></i>
+            Капельное орошение
+          </li>
+          <li>
+            <i class="fas fa-check"></i>
+            Упаковка для кормовых культур
+          </li>
+          <li>
+            <i class="fas fa-check"></i>
+            Упаковка для овощных культур
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-unstyled">
+          <li>
+            <a class="text-success">8 800 555-86-88</a><br>
+            Звонок по России - бесплатный
+          </li>
+          <li>
+            <a class="text-success">Info@neo-agriservis.ru</a>
+            Пн.-Пт.:8:30 - 17:00
+          </li>
+        </ul>
+      </div>
+      <div>
+        <button type="button" class="mybtn bg-success textdecor history_api" data-toggle="modal" data-target="#feedbackFormModal">Заказать звонок</button>
+      </div>
+      </div>
+    </div>
+    <!-- Форма обратной связи в модальном окне -->
+		<div class="modal" id="feedbackFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="myModalLabel">Форма обратной связи</h5>
+		        <button type="button" class="close history_api_back" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">×</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <!-- Форма обратной связи -->
+		        <form id="feedbackForm" class="ajaxForm" action="https://formcarry.com/s/IG3xUDz6F_r" method="POST">
+		            <div class="col-sm-12">
+		                <input id="name" type="text" name="name" class="form-control" placeholder="Имя" minlength="2" maxlength="30">
+		            </div><br>
+		            <div class="col-sm-12">
+		                <input id="phone" type="number" name="phone" class="form-control" value="" placeholder="Телефон">
+		            </div><br>
+								<div class="col-sm-12">
+										<select name="Coins" id="regions" class="form-control">
+												<option value="0" selected="selected">Краснодар</option>
+												<option value="1">Ростов</option>
+												<option value="2">Сочи</option>
+												<option value="3">Омск</option>
+												<option value="4">Москва</option>
+										</select>
+		            </div><br>
+								<div class="col-sm-12">
+			            	<textarea id="message" name="message" class="form-control" rows="3" placeholder="Сообщение" minlength="20" maxlength="500" required="required"></textarea>
+								</div><br>
+		          	<!-- Сообщение -->
+			          <!-- Кнопка для отправки формы -->
+								<div class="container">
+			          	<button type="submit" id="sendMail" class="mybtn bg-success textdecor content-center">Отправить сообщение</button>
+								</div>
+		        	</form>
+		      	</div>
+		    	</div>
+		  	</div>
+			</div>
+		<nav class="navbar navbar-expand-md nv">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto click-menu-element">
+            <li class="nav-item dropdown">
+              <a class="nav-link mybtn1" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i> ПРОДУКЦИЯ
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">КАПЕЛЬНОЕ ОРОШЕНИЕ</a>
+                <a class="dropdown-item" href="#">УПАКОВКА ДЛЯ ОВОЩНЫХ КУЛЬТУР</a>
+                <a class="dropdown-item" href="#">УПАКОВКА ДЛЯ КОРМОВЫХ КУЛЬТУР</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">УСЛУГИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-value="ourwork" href="index1.html">РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-value="pismo" href="blockchainshop.html">СТАТЬИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-value="klient" href="aboutcompany.html">КЛИЕНТЫ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-value="companypeople" href="phone.html">О КОМПАНИИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-value="contactinfo" href="blockchainshop.html">КОНТАКТЫ</a>
+            </li>
+          </ul>
+          <button type="button" class="mybtn1"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </nav>
+		<div id="video-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <video class="video-fluid" autoplay loop muted>
+            <source src="img/v.mp4" type="video/mp4" />
+          </video>
+          <div class="carousel-caption">
+            <h2>Новый век агротехнологий</h2>
+            <h4>Мы создаём и внедряем инновацмонные технологии интеллектуального орошения, повышающие эффективность сельского хозяйства и качество агрокультур</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+		<main>
+      <div class="card-deck" id="card-deck">
+        <div class="card col-xs-12 col-md-3 shadow-card">
+          <div class="row justify">
+            <div class="col-xs-3 justify-1">
+              <img src="img/pic1.png" class="card-img-top" alt="img">
+            </div>
+            <div class="justify-2">
+              <img src="img/pic2.jpg" class="card-img-top border_radius" width="180" height="180" alt="img">
+            </div>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Капельное<br>орошение</h4>
+          </div>
+        </div>
+        <div class="card col-xs-12 col-md-3 shadow-card">
+          <div class="row justify">
+            <div class="col-xs-4 justify-1">
+              <img src="img/pic3.png" class="card-img-top" alt="img">
+            </div>
+            <div class="justify-2">
+              <img src="img/pic4.JPEG" class="card-img-top border_radius" width="180" height="180" alt="img">
+            </div>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Сетка<br>сеновязальная</h4>
+          </div>
+        </div>
+        <div class="card col-xs-12 col-md-3 shadow-card">
+          <div class="row justify">
+            <div class="col-xs-3 justify-1">
+              <img src="img/pic5.png" class="card-img-top" alt="img">
+            </div>
+            <div class="justify-2">
+              <img src="img/pic6.JPG" class="card-img-top border_radius" width="180" height="180" alt="img">
+            </div>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Упаковка для<br>овощных культур</h4>
+          </div>
+        </div>
+      </div>
+      <div class="container block-margin block-margin-bottom"><h2 class="title1">Реализованные проекты систем<br>капельного орошения</h2></div>
+      <div class="card-deck col-md-10 col-xs-12 block-margin-2">
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic7.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Капельный полив салата в цфо<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic8.JPG" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Капельный полив малины в цфо<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic9.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Капельный полив моркови в Казахстане<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic10.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Капельный полив овощей в пфо<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container block-margin"><h2 class="title1">Преимущества компании<br>"Новый век агротехнологий"</h2></div>
+      <div class="row justify-for-center block-margin-2">
+        <div class="col-md-3">
+          <img src="img/pic11.png" class="img-text" alt="image1">
+          <div class="text-margin">
+            <h6 class="title1">Более 20 лет на рынке</h6>
+            Многолетний опыт производства и<br>поставки, начиная с 1988 года
+          </div>
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic12.png" class="img-text" alt="image3">
+          <div class="text-margin">
+            <h6 class="title1">Ведущий отечественный<br>производитель</h6>
+            Крупнейший отечественный<br>производитель систем капельного<br>орошения NEO-DRIP
+          </div>
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic13.png" class="img-text" alt="image2">
+          <div class="text-margin">
+            <h6 class="title1">Полный сервис</h6>
+            Мы предоставляем полный сервис по обслуживанию систем капельного орошения
+          </div>
+        </div>
+      </div>
+      <div class="container block-margin">
+        <h2 class="title1">Нам доверяют</h2> 
+      </div>
+      <div class="row col-md-10 mx-auto block-margin-2">
+        <div class="col-md-3">
+          <img src="img/pic14.jpg" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic15.gif" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic16.png" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic17.jpg" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic18.png" alt="image1">
+        </div>
+        <div class="col-md-3 mt-5">
+          <img src="img/pic19.png" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic20.jpg" alt="image1">
+        </div>
+        <div class="col-md-3">
+          <img src="img/pic21.png" alt="image1">
+        </div>
+        <div class="col-md-3 mx-auto mt-5">
+          <img src="img/pic22.jpg" alt="image1">
+        </div>
+      </div>
+      <div class="card-deck col-md-10 col-xs-12 mt-5">
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div class="mt-5">
+              <h2>Статьи</h2>
+              Здесь будут представлены публикации для сельхозорганизаций
+              <div>
+                <i class="fa fa-file"></i><a href="#" class="text-success">  ВCЕ СТАТЬИ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic23.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Ленты для капельного орошения: виды...<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic24.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Организация орошения в питомниках<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 col-xs-12 card-resProject mask">
+          <div class="row">
+            <div>
+              <img src="img/pic25.jpg" class="card-img-top justify-3" alt="img">
+              <h6 class="text-uppercase justify-4">Методика расчёта систем капельного орошения<br><small><i class="fa fa-eye"></i>14</small><small class="py-3 date-card">06.09.2019</small><small class="date-card-2"><i class="fa fa-thumbs-up"></i>0  </small><small><i class="fa fa-thumbs-down"></i>0</small></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+<section class="details-card block-margin">
+    <div class="container">
+        <h2 class="mb-4">Архив новостей</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card-content">
+                    <div class="card-desc">
+                        <h1 class="title1 title1-color">06 <small class="small-color">сентября</small></h1>
+                        <h6 class="title1">Компания ЗАО"Новый век агротехнологий" впервые
+                        примет участие в "Дне поля Ставропольского края 2019"</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                            <a href="#" class="mybtn bg-success textdecor">Подробнее</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-content">
+                    <div class="card-desc">
+                        <h1 class="title1 title1-color">26 <small class="small-color">августа</small></h1>
+                        <h6 class="title1">Компания ЗАО"Новый век агротехнологий" впервые
+                        примет участие в "Дне поля Ставропольского края 2019"</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                            <a href="#" class="mybtn bg-success textdecor">Подробнее</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-content">
+                    <div class="card-desc">
+                        <h1 class="title1 title1-color">12 <small class="small-color">августа</small></h1>
+                        <h6 class="title1">Компания ЗАО"Новый век агротехнологий" впервые
+                        примет участие в "Дне поля Ставропольского края 2019"</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                            <a href="#" class="mybtn bg-success textdecor">Подробнее</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-content">
+                    <div class="card-desc">
+                        <h1 class="title1 title1-color">01 <small class="small-color">августа</small></h1>
+                        <h6 class="title1">Компания ЗАО"Новый век агротехнологий" впервые
+                        примет участие в "Дне поля Ставропольского края 2019"</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                            <a href="#" class="mybtn bg-success textdecor">Подробнее</a>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="card-deck col-md-10 col-xs-12 mt-5">
+        <div class="card col-md-6 col-xs-12 card-resProject block-margin-2">
+          <div class="row">
+            <div>
+              <h2 class="title1">Связаться с нами</h2>
+              <p>Если у вас есть вопросы по нашей продукции или вы хотели бы оставить свои комментарии или предложения...</p>
+              <div class="mt-5">
+                <a href="#" class="mybtn bg-success textdecor">Оставить заявку</a>
+                <i class="fa fa-file"></i><a href="#" class="text-success">  ВCЕ КОНТАКТЫ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-6 col-xs-12 card-resProject mask">
+            <div>
+              <img src="img/pic26.jpg" width="300" class="card-img-top justify-3" alt="img">
+            </div>
+        </div>
+      </div>
+		</main>
+    <footer>
+     <div class="object navbar navbar-expand bg-light flex-column flex-md-row bd-navbar block-margin-3">
+      <div class="container">
+      <a class="navbar-brand text-success" href="#">
+        <img src="img/logo.jpg" alt="image1">
+        Новый век агротехнологий
+      </a>
+      <div>
+        <ul class="list-unstyled">
+          <li>
+            <i class="fas fa-check"></i>
+            Капельное орошение
+          </li>
+          <li>
+            <i class="fas fa-check"></i>
+            Упаковка для кормовых культур
+          </li>
+          <li>
+            <i class="fas fa-check"></i>
+            Упаковка для овощных культур
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-unstyled">
+          <li>
+            <a class="text-success">8 800 555-86-88</a><br>
+            Звонок по России - бесплатный
+          </li>
+          <li>
+            <a class="text-success">Info@neo-agriservis.ru</a>
+            Пн.-Пт.:8:30 - 17:00
+          </li>
+        </ul>
+      </div>
+      <div>
+        Мы в соц. сетях<br>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-vk" aria-hidden="true"></i>
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+      </div>
+      </div>
+    </div> 
+    </footer>
+	</body>
+</html>
